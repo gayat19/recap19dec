@@ -1,0 +1,12 @@
+<form [formGroup]="myForm">
+    <label>Id</label>
+    <input type="text" formControlName="id">
+    <span *ngIf="!id.valid && id.touched">
+        Invalid entry
+    </span>
+    <br>
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <br>
+    <button (click)="createUser()">Add user</button>
+</form>
